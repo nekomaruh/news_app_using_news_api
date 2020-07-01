@@ -26,6 +26,7 @@ class _Noticia extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
+        SizedBox(height: 10,),
         _TarjetaTopBar(noticia: noticia, index: index,),
         _TarjetaTitulo(noticia: noticia),
         _TarjetaImagen(noticia: noticia),
@@ -33,7 +34,6 @@ class _Noticia extends StatelessWidget {
         _TarjetaBotones(),
         SizedBox(height: 10,),
         Divider(),
-
       ],
     );
   }
@@ -49,13 +49,13 @@ class _TarjetaBotones extends StatelessWidget {
           RawMaterialButton(
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             fillColor: miTema.accentColor,
-            child: Icon(Icons.star_border),
+            child: Icon(Icons.star_border, color: Colors.white,),
             onPressed: (){},),
             SizedBox(width: 10,),
           RawMaterialButton(
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             fillColor: Colors.blue,
-            child: Icon(Icons.more),
+            child: Icon(Icons.more, color: Colors.white,),
             onPressed: (){},),
             SizedBox(width: 10,)
         ],
@@ -71,7 +71,7 @@ class _TarjetaBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal:15),
+      padding: const EdgeInsets.symmetric(horizontal:15, vertical: 10),
       child: Text(noticia.description != null? noticia.description : '',),
     );
   }
@@ -102,7 +102,7 @@ class _TarjetaTitulo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 15),
+      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       child: Text(noticia.title, style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),),
     );
   }

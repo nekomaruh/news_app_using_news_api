@@ -14,8 +14,8 @@ class _Tab1PageState extends State<Tab1Page> with AutomaticKeepAliveClientMixin{
   Widget build(BuildContext context) {
     final headLines = Provider.of<NewsService>(context).headLines;
 
-    return Scaffold(
-      body: Scaffold(
+    return SafeArea(
+      child: Scaffold(
         body: headLines.length == 0? 
         Center(child: CircularProgressIndicator()): 
         ListaNoticias(noticias: headLines,),
