@@ -1,3 +1,4 @@
 # news_app_using_news_api
  
-![image](https://imgur.com/YjEiBwx)
+
+[img]https://i.imgur.com/YjEiBwx.png[/img]
